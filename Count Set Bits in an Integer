@@ -1,0 +1,12 @@
+class Solution {
+    static int setBits(int N) {
+        int count = 0;
+        while(N>0){
+            if((N&1)!=0){ //if LSB of the given no. is not 0
+                count++;
+            }
+            N=N>>1; //right shift the given no. by 1
+        }
+        return count;
+    }
+}
